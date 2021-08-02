@@ -1,1 +1,1 @@
-web: gunicorn expenseswebsite.wsgi
+web: gunicorn expenseswebsite.wsgi --log-file -
