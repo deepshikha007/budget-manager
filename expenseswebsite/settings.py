@@ -142,10 +142,10 @@ MESSAGE_TAGS = {
 
 # email stuff
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'testdjango773@gmail.com'
+EMAIL_HOST_USER = ' '
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'testdjango773@gmail.com'
+DEFAULT_FROM_EMAIL = ' '
 EMAIL_PORT = 587
-EMAIL_HOST_PASSWORD = 'Chimpu03@'
+EMAIL_HOST_PASSWORD = ' '
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
