@@ -27,7 +27,7 @@ def index(request):
             user_settings.save()
         else:
             Setting.objects.create(user=request.user, currency=currency)
-            user_settings['currency'] = currency
+            #user_settings['currency'] = currency
         messages.success(request, 'Changes saved successfully')
 
         return render(request, 'settings/index.html', context={'currencies': arr, 'settings': user_settings})
