@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+from django.contrib import messages
 from pathlib import Path
 import os
 import django_heroku
@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'six',
     'expenses',
+    'income',
+    'settings',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +135,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 django_heroku.settings(locals())
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# email stuff
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testdjango773@gmail.com'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'testdjango773@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'Chimpu03@'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
